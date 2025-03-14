@@ -3,7 +3,7 @@ Turnstiled
 
 Turnstiled makes it easy to add the Cloudflare Turnstile Captcha to your Rails app.
 
-For development, it even inlucdes a Mock widget.
+For development, it even includes a Mock widget.
 
 Getting Usage
 -------------
