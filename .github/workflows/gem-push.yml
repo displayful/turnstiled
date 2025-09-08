@@ -34,7 +34,7 @@ jobs:
         uses: rubygems/release-gem@v1
 
       - name: Create GitHub Release
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             github.rest.repos.createRelease({
