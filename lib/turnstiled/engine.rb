@@ -4,7 +4,7 @@ module Turnstiled
       ActiveSupport.on_load(:action_controller_base) { include Turnstiled::ControllerMethods }
     end
 
-    initializer "turnstiled.controller" do
+    initializer "turnstiled.view" do
       ActiveSupport.on_load(:action_view) { include Turnstiled::ViewHelper }
     end
 
