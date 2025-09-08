@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    turnstiled (0.1.14)
+    turnstiled (0.1.16)
       faraday
       rails (>= 6.0.0)
 
