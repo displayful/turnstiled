@@ -1,7 +1,7 @@
 Turnstiled
 ==========
 
-Turnstiled makes it easy to add the Cloudflare Turnstile Captcha to your Rails app.
+Integrate Cloudflare Turnstile into Ruby on Rails apps with ease.
 
 For development, it even includes a Mock widget.
 
