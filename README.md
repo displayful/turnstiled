@@ -58,3 +58,10 @@ end
 ```
 
 The `verify_turnstile_request` takes the same options as a `before_action` method call.
+
+### Releasing
+
+Change the version in `lib/turnstiled/version.rb` and then run `bundle` to make sure that `Gemfile.lock` is
+updated with the new version.
+
+The gem is automatically released when pushed to main on GitHub
