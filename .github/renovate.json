@@ -1,0 +1,42 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+
+  "extends": [
+    "config:recommended",
+    "abandonments:recommended"
+  ],
+
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+
+  "labels": [
+    "renovate",
+    "{{manager}}",
+    "{{bumpType}}"
+  ],
+
+  "reviewers": [
+    "henrikbjorn"
+  ],
+
+  "packageRules": [
+    {
+      "description": "Bump Ruby across .ruby-version, Dockerfile and Gemfile.lock in one PR",
+      "matchDepNames": ["ruby"],
+      "groupName": "ruby"
+    }
+  ],
+
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Keep Gemfile.lock RUBY VERSION block in sync with .ruby-version",
+      "fileMatch": ["(^|/)Gemfile\\.lock$"],
+      "matchStrings": [
+        "RUBY VERSION\\s+ruby (?<currentValue>\\d+\\.\\d+\\.\\d+)"
+      ],
+      "depNameTemplate": "ruby",
+      "datasourceTemplate": "ruby-version"
+    }
+  ]
+}
