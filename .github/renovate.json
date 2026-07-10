@@ -31,7 +31,7 @@
     {
       "customType": "regex",
       "description": "Keep Gemfile.lock RUBY VERSION block in sync with .ruby-version",
-      "fileMatch": ["(^|/)Gemfile\\.lock$"],
+      "managerFilePatterns": ["/(^|/)Gemfile\\.lock$/"],
       "matchStrings": [
         "RUBY VERSION\\s+ruby (?<currentValue>\\d+\\.\\d+\\.\\d+)"
       ],
