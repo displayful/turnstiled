@@ -17,26 +17,5 @@
 
   "reviewers": [
     "henrikbjorn"
-  ],
-
-  "packageRules": [
-    {
-      "description": "Bump Ruby across .ruby-version, Dockerfile and Gemfile.lock in one PR",
-      "matchDepNames": ["ruby"],
-      "groupName": "ruby"
-    }
-  ],
-
-  "customManagers": [
-    {
-      "customType": "regex",
-      "description": "Keep Gemfile.lock RUBY VERSION block in sync with .ruby-version",
-      "managerFilePatterns": ["/(^|/)Gemfile\\.lock$/"],
-      "matchStrings": [
-        "RUBY VERSION\\s+ruby (?<currentValue>\\d+\\.\\d+\\.\\d+)"
-      ],
-      "depNameTemplate": "ruby",
-      "datasourceTemplate": "ruby-version"
-    }
   ]
 }
