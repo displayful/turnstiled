@@ -2,13 +2,19 @@
 
 module Turnstiled
   module ViewHelper
-    def turnstile_tag(size: "compact", **options)
+    # `size` and `theme` reach the widget as Stimulus values rather than as the
+    # `data-size`/`data-theme` attributes Cloudflare documents: the script is
+    # loaded with `render=explicit`, and in that mode the widget is drawn from
+    # the object passed to `turnstile.render` and never reads the element.
+    def turnstile_tag(size: "compact", theme: "auto", **options)
       options = options.deep_merge(
         class: "cf-turnstile #{options[:class]}",
         data: {
           sitekey: Turnstiled.site_key,
           controller: "turnstile",
           turnstile_site_key_value: Turnstiled.site_key,
+          turnstile_size_value: size,
+          turnstile_theme_value: theme,
           size:
         }
       )

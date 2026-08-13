@@ -49,6 +49,18 @@ Within a form make sure to render the widget:
 <% end %>
 ```
 
+`turnstile_tag` takes Cloudflare's `size` and `theme`, and passes anything else
+to the `div` it renders:
+
+``` erb
+<%= turnstile_tag size: "flexible", theme: "light", class: "rounded-md" %>
+```
+
+`size` is one of `normal`, `flexible` or `compact`, and defaults to `compact`.
+`theme` is one of `auto`, `light` or `dark`, and defaults to `auto` — which
+follows the visitor's operating system, so a site with no dark mode of its own
+should say `light` rather than take a dark widget on a light page.
+
 In your controller, you also need to verify the response with the following:
 
 ``` ruby
