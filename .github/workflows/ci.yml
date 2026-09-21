@@ -31,7 +31,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: ruby-3.4.2
+          ruby-version: ruby-3.4.9
           bundler-cache: true
 
       - name: Run tests
