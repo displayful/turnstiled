@@ -38,3 +38,20 @@ jobs:
         env:
           RAILS_ENV: test
         run: bin/test
+
+  audit:
+    runs-on: ubuntu-26.04-arm
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ruby
+
+      - name: Check for vulnerabilities (Bundler)
+        run: |
+          gem install bundler-audit
+          bundle-audit check --update

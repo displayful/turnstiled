@@ -9,6 +9,10 @@
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
 
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+
   "labels": [
     "renovate",
     "{{manager}}",
