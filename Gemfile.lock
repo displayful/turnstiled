@@ -140,10 +140,10 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.5)
-    nokogiri (1.19.4)
+    nokogiri (1.19.5)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.19.4-arm64-darwin)
+    nokogiri (1.19.5-arm64-darwin)
       racc (~> 1.4)
     parallel (1.27.0)
     parser (3.3.10.1)
@@ -305,8 +305,8 @@ CHECKSUMS
   net-protocol (0.3.0) sha256=ba310c3d4f1cad46bb1ab20336b06669b1ff8f7c568d9cb9342b32a718547472
   net-smtp (0.5.1) sha256=ed96a0af63c524fceb4b29b0d352195c30d82dd916a42f03c62a3a70e5b70736
   nio4r (2.7.5) sha256=6c90168e48fb5f8e768419c93abb94ba2b892a1d0602cb06eef16d8b7df1dca1
-  nokogiri (1.19.4) sha256=50c951611c92bca05c51411aef45f1cbc50f2821c4802758c5c6d34696533ab5
-  nokogiri (1.19.4-arm64-darwin) sha256=a46db9853286e6597b36ebc6953817d15acf3a299583eb3f89fdc6f91dd63527
+  nokogiri (1.19.5) sha256=d7ff830dfbe32fa03191412d8ef9dbf0d2db77bc4587e683dc38ec55813c8e03
+  nokogiri (1.19.5-arm64-darwin) sha256=2d0baa8f8234c442f0190133da87c9a2a89d48ec0b5e0c986d6047255d63a2f5
   parallel (1.27.0) sha256=4ac151e1806b755fb4e2dc2332cbf0e54f2e24ba821ff2d3dcf86bf6dc4ae130
   parser (3.3.10.1) sha256=06f6a725d2cd91e5e7f2b7c32ba143631e1f7c8ae2fb918fc4cebec187e6a688
   pp (0.6.3) sha256=2951d514450b93ccfeb1df7d021cae0da16e0a7f95ee1e2273719669d0ab9df6
