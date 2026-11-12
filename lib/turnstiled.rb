@@ -1,3 +1,4 @@
+require "faraday"
 
 module Turnstiled
   autoload :ControllerMethods, "turnstiled/controller_methods"

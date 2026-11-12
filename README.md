@@ -59,6 +59,29 @@ end
 
 The `verify_turnstile_request` takes the same options as a `before_action` method call.
 
+A failed check answers `400 Bad Request`. To re-render the form instead, name a method with `with:`, or pass a block:
+
+``` ruby
+class SessionsController < ApplicationController
+  verify_turnstile_request with: :turnstile_failed, only: %i[create]
+
+  private
+
+  def turnstile_failed
+    @session = Session.new
+    @session.errors.add(:base, "That check did not go through. Try again.")
+
+    render :new, status: :unprocessable_content
+  end
+end
+```
+
+``` ruby
+verify_turnstile_request(only: %i[create]) { redirect_to root_path }
+```
+
+When Cloudflare can't be reached, the error is reported through `Rails.error` and the request is treated as a failed check.
+
 ### Releasing
 
 Change the version in `lib/turnstiled/version.rb` and then run `bundle` to make sure that `Gemfile.lock` is
