@@ -18,13 +18,12 @@ module Turnstiled
 
     def turnstile_javascript_tag
       if ::Turnstiled.mock
-        javascript_include_tag("turnstiled/mock_turnstile_widget.js", defer: true, data: { turbo_track: "reload" })
+        javascript_include_tag("turnstiled/mock_turnstile_widget.js", defer: true, data: { turnstiled: true })
       else
-        javascript_include_tag("https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit",
-                               defer: true,
-                               data: {
-                                 turbo_track: "reload"
-                               })
+        javascript_include_tag(
+          "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit",
+          defer: true, data: { turnstiled: true }
+        )
       end
     end
   end
