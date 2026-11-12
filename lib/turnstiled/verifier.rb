@@ -12,6 +12,9 @@ module Turnstiled
       })
 
       response.body.fetch("success", false)
+    rescue Faraday::Error => error
+      Rails.error.report(error, handled: true, severity: :warning)
+      false
     end
 
     def client
